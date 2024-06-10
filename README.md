@@ -24,6 +24,9 @@ The solution is pretty simple. I have a helper function to get the counts of eac
 1. Each character in a given word in the dictionary must exist in the `inputString`
 2. Each character in a given word in the dictionary cannot occur more times than it occurs in `inputString`
 
+### Solution Notes
+- I do not handle the case of duplicate words in the dictionary.
+
 ## Testing
 Given more time I would test massive input strings and massive dictionaries to evaluate efficiency. Here are some example test cases (including the ones provided to me):
 
@@ -44,4 +47,8 @@ findWords("", ["ate", "eat", "tea", "dog", "do", "god", "goo", "go", "good"]) //
 findWords("test", [""]) // malformed dictionary
 
 findWords("test", []) // empty dictionary
+
+findWords("test", ["test", "test", "hungry", "lunch", "poke"]) // duplicate words
+
+findWords("!?123", ["3", "500", "password123!", "22?", "13!?"]) // numbers and special characters
 ```
